@@ -103,7 +103,8 @@
 
 /*************************Legion core********************/
 /obj/item/organ/regenerative_core/legion
-	desc = "A strange rock that crackles with power. It can be used to heal completely, but it will rapidly decay into uselessness."
+	name = "Chug Jug"
+	desc = "A refreshing drink. Heals all damage (including broken bones). Will go off after an amount of time. After that period, you will no longer be able to hit that Chug Jug."
 	icon_state = "legion_soul"
 
 /obj/item/organ/regenerative_core/legion/Initialize()
@@ -121,8 +122,8 @@
 
 /obj/item/organ/regenerative_core/legion/go_inert()
 	..()
-	desc = "[src] has become inert. It has decayed, and is completely useless."
+	desc = "[src] has gone off, and become useless. You can no longer hit that Chug Jug."
 
 /obj/item/organ/regenerative_core/legion/preserved(implanted = 0)
 	..()
-	desc = "[src] has been stabilized. It is preserved, allowing you to use it to heal completely without danger of decay."
+	desc = "[src] has been stabilized. It will now not go off, so you can hit that Chug Jug whenever you want.."
