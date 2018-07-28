@@ -77,6 +77,25 @@
 	if(..())
 		playsound(user.loc, 'sound/effects/fingersnap.ogg', 50)
 
+/datum/emote/living/carbon/human/default_dance
+	key = "dancemoves"
+	key_third_person = "shows off their dance moves!"
+	message = "shows off their dance moves!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/carbon/human/default_dance/run_emote(mob/user, params)
+	if(..())
+		playsound(user.loc, 'sound/effects/default-dance.ogg', 50)
+		user.spin(20, 1)
+		sleep(2.2 SECONDS)
+		user.SpinAnimation(5,1)
+		sleep(0.4 SECONDS)
+		user.spin(20, 1)
+		sleep(2 SECONDS)
+		user.SpinAnimation(5,1)
+		sleep(0.4 SECONDS)
+		user.spin(20, 1)
+
 /datum/emote/living/carbon/human/squish
 	key = "squish"
 	key_third_person = "squishes"
@@ -85,6 +104,7 @@
 
 /datum/emote/living/carbon/human/squish/run_emote(mob/user, params)
 	if(..())
+		user.SpinAnimation(10,1)
 		playsound(user.loc, 'sound/effects/slime_squish.ogg', 50)
 
 /datum/emote/living/carbon/human/squish/can_run_emote(mob/user)
